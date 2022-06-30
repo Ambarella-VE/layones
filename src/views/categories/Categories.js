@@ -23,7 +23,7 @@ const Categories = ({navigation}) => {
   const onSelectedCategoryHandler = prov => {
     dispatch(selectCategory(prov.id))
     navigation.navigate('Providers',{
-      name: prov.title
+      name: prov.name
     })
   }
 
