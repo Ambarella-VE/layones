@@ -3,13 +3,13 @@ import {
   combineReducers 
 } from "@reduxjs/toolkit";
 import {
-  CategoriesReducer as categories,
-  ProvidersReducer as providers
+  CategoriesReducer,
+  ProvidersReducer
 } from './reducers/index'
 
 const rootReducer = combineReducers({
-  categories,
-  providers
+  categories: CategoriesReducer,
+  providers: ProvidersReducer
 })
 
 const store = configureStore({reducer: rootReducer})
