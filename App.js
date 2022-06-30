@@ -9,6 +9,8 @@ import AppShell from './src/navigation/AppShell';
 import {
   Theme,
 } from './src/styles/index'
+import { Provider } from 'react-redux'
+import store from './src/redux/store'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -33,7 +35,9 @@ export default function App() {
   })
 
   return (
-    <>
+    <Provider
+      store={store}
+    >
       {
         !fontsLoaded ?
         <ActivityIndicator 
@@ -43,6 +47,6 @@ export default function App() {
         <AppShell />
       }
       <StatusBar style="auto" />
-    </>
+    </Provider>
   );
 }
