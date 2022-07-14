@@ -13,7 +13,7 @@ const ListItem = ({item,onSelected}) => {
     <TouchableOpacity style={styles.container}>
       <View style={styles.labelContainer}>
         <Text style={styles.text}>
-          {item.item.name}
+          {item.name}
         </Text>  
       </View>
     </TouchableOpacity>
